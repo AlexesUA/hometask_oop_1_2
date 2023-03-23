@@ -27,7 +27,7 @@ public class Book {
         if(authorsBook.size()==1) System.out.print("Автор: ");
         else System.out.print("Автори: ");
 
-        authorsBook.forEach(author -> ShowAuthors());
+        authorsBook.forEach(author -> author.ShowAuthor());
 
 
     }
@@ -37,12 +37,13 @@ public class Book {
     }
 
     public void ShowContent(){
-        contentsBook.forEach(content -> ShowContent());
+        contentsBook.forEach(content -> content.ShowContent());
     }
 
     public void ShowBook(){
         System.out.println("Книга: " + titleBook);
         ShowAuthors();
+        System.out.println("\nЗміст:");
         ShowContent();
     }
 

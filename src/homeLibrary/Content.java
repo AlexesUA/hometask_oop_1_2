@@ -17,5 +17,5 @@ public class Content {
     //public void SetNumberContent(int value){numberContent = value;}
     public int getNumberContent() {return numberContent;}
 
-    public void ShowContent(){System.out.print(numberContent + ". " + content);}
+    public void ShowContent(){System.out.println(numberContent + ". " + content);}
 }

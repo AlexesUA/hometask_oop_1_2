@@ -15,9 +15,10 @@ public class Main {
         do {
             System.out.printf("Ваша бібліотека складається з %1$s книг %n", homeLibraries.GetCountBooks());
             do {
-                System.out.print("Додати книгу - y, Пропустити - n, Роздрукувати бібліотеку - p, Вихід - q");
+                System.out.println("Додати книгу - y, Пропустити - n, Роздрукувати бібліотеку - p, Вихід - q");
+                System.out.print("Вибір: ");
                 marker = homeLibraries.scInput.next().toLowerCase().charAt(0);
-            }while (marker != 'q' || marker != 'y' || marker != 'n' || marker != 'p');
+            }while (marker != 'q' && marker != 'y' && marker != 'n' && marker != 'p');
 
             switch (marker){
                 case 'y':

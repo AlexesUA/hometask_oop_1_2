@@ -39,10 +39,10 @@ public class HomeLibrary {
         ArrayList<String> newAuthors = new ArrayList<String>();
         do{
             newAuthors.add(CheckEmptyString("Введіть ім'я автора книги: "));
-            System.out.println("Додайте ще автора книги? y/n:  ");
+            System.out.print("Додайте ще автора книги? y/n:  ");
             do {
                 more = scInput.next().toLowerCase().charAt(0);
-            }while (more!='y' || more!='n');
+            }while (more!='y' && more!='n');
 
         }while(more=='y');
 
@@ -51,10 +51,10 @@ public class HomeLibrary {
         ArrayList<String> newContent = new ArrayList<String>();
         do{
             newContent.add(CheckEmptyString("Введіть рядок зміста книги: "));
-            System.out.println("Додайте ще рядок зміста книги? y/n:  ");
+            System.out.print("Додайте ще рядок зміста книги? y/n:  ");
             do {
                 more = scInput.next().toLowerCase().charAt(0);
-            }while (more!='y' || more!='n');
+            }while (more!='y' && more!='n');
 
         }while(more=='y');
 
