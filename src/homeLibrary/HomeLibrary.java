@@ -1,0 +1,66 @@
+package homeLibrary;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class HomeLibrary {
+    private int countBoks;
+    private ArrayList<Book> booksShelf;
+    Scanner scInput;
+
+
+    public HomeLibrary(){
+        countBoks = 0;
+        booksShelf = new ArrayList<Book>();
+        scInput = new Scanner(System.in);
+    }
+
+    private String CheckEmptyString(String titleInput){
+
+        String value;
+        do {
+            System.out.print(titleInput);
+            value = scInput.nextLine();
+            if (value == "") System.out.println("Строка не може бути порожнйою. ");
+            else return value;
+        }while (true);
+    }
+    public void AddBook(){
+
+        System.out.println("Додайте нову книгу. ");
+
+        String newTitleBook = CheckEmptyString("Введіть назву книги: ");
+
+        System.out.println("Додайте автора/авторів книги. ");
+        char more = 'y';
+        ArrayList<String> newAuthors = new ArrayList<String>();
+        do{
+            newAuthors.add(CheckEmptyString("Введіть ім'я автора книги: "));
+            System.out.println("Додайте ще автора книги? y/n:  ");
+            do {
+                more = scInput.next().toLowerCase().charAt(0);
+            }while (more!='y' || more!='n');
+
+        }while(more=='y');
+
+        System.out.println("Додайте зміст книги. ");
+        more = 'y';
+        ArrayList<String> newContent = new ArrayList<String>();
+        do{
+            newContent.add(CheckEmptyString("Введіть рядок зміста книги: "));
+            System.out.println("Додайте ще рядок зміста книги? y/n:  ");
+            do {
+                more = scInput.next().toLowerCase().charAt(0);
+            }while (more!='y' || more!='n');
+
+        }while(more=='y');
+
+
+        booksShelf.add(new Book(newTitleBook,newAuthors,newContent));
+        countBoks = booksShelf.size();
+
+
+    }
+
+}
