@@ -20,7 +20,9 @@ public class Book {
         for (; i<authorsBook.length; i++){
             newAuthors[i] = authorsBook[i];
         }
-        newAuthors[i].SetAuthor(name);
+        newAuthors[i] = new Author(name);
+
+        authorsBook = newAuthors;
     }
 
     public void ShowAuthors(){
@@ -33,6 +35,28 @@ public class Book {
             else System.out.println(". ");
 
         }
+    }
+
+    public void AddContent(String content){
+        Content[] newContentsBook = new Content[contentsBook.length+1];
+        int i = 0;
+        for(; i<contentsBook.length; i++){
+            newContentsBook[i] = contentsBook[i];
+        }
+        newContentsBook[i] = new Content(i, content);
+    }
+
+    public void ShowContent(){
+        System.out.println("Зміст: ");
+        for(int i=0; i<contentsBook.length; i++){
+            contentsBook[i].ShowContent();
+        }
+    }
+
+    public void ShowBook(){
+        System.out.println("Книга: " + titleBook);
+        ShowAuthors();
+        ShowContent();
     }
 
 

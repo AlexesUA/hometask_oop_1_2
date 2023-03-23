@@ -7,7 +7,7 @@ public class Author {
         nameAuthor = name;
     }
 
-    public void SetAuthor(String value){nameAuthor = value;}
+    //public void SetAuthor(String value){nameAuthor = value;}
     public String GetAuthor(){return nameAuthor;}
     public void ShowAuthor(){System.out.print(nameAuthor);}
 
