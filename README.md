@@ -9,3 +9,5 @@ Home Task OOP 1.2
 Створити два методи, що обчислюють площу прямокутника - double areaCalculator (double side1, double side2) 
 і периметр прямокутника - double perimeterCalculator (double side1, double side2). Написати програму, 
 яка приймає від користувача довжини двох сторін прямокутника і виводить на екран периметр та площу.
+
+
