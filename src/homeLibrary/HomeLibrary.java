@@ -5,13 +5,13 @@ import java.util.List;
 import java.util.Scanner;
 
 public class HomeLibrary {
-    private int countBoks;
+    private int countBooks;
     private ArrayList<Book> booksShelf;
-    Scanner scInput;
+    public Scanner scInput;
 
 
     public HomeLibrary(){
-        countBoks = 0;
+        countBooks = 0;
         booksShelf = new ArrayList<Book>();
         scInput = new Scanner(System.in);
     }
@@ -26,6 +26,8 @@ public class HomeLibrary {
             else return value;
         }while (true);
     }
+
+    public int GetCountBooks(){return countBooks;}
     public void AddBook(){
 
         System.out.println("Додайте нову книгу. ");
@@ -58,9 +60,15 @@ public class HomeLibrary {
 
 
         booksShelf.add(new Book(newTitleBook,newAuthors,newContent));
-        countBoks = booksShelf.size();
+        countBooks = booksShelf.size();
+    }
 
-
+    public void PrinkLibrary(){
+        for(int i=0; i<booksShelf.size(); i++){
+            System.out.println("Книга № " + i+1 + "= = = = = = = = = = = = = = = = = = = = =");
+            booksShelf.get(i).ShowBook();
+            System.out.println("= = = = = = = = = = = = = = = = = = = = =");
+        }
     }
 
 }
