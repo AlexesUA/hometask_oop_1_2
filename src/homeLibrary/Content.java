@@ -12,7 +12,7 @@ public class Content {
     public void SetContent(String value) {content = value;}
     public String GetContent (){return content;}
 
-    public void SetNumberContent(int value){numberContent = value;}\
+    public void SetNumberContent(int value){numberContent = value;}
     public int getNumberContent() {return numberContent;}
 
     public void ShowContent(){System.out.print(numberContent + ". " + content);}
